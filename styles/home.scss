@@ -220,7 +220,7 @@ body {
   }
 }
 
-
+// Spain Section
 .spain-section {
   display: flex;
   flex-direction: column;
@@ -307,7 +307,7 @@ body {
   }
 }
 
-
+// Footer
 footer {
   background-color: #232323;
   color: $white;
@@ -330,4 +330,90 @@ footer {
   }
 }
 
+// Media Queries
+@media (max-width: 768px) {
+  .hero {
+    &-content {
+      margin-top: 20px;
 
+      h1 {
+        font-size: 3rem;
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: center;
+
+    input[type="text"] {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  .main-nav {
+    .nav-container {
+      flex-direction: column;
+    }
+
+    .nav-links {
+      margin-top: 20px;
+
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+
+  .why-choose-us {
+    .container {
+      flex-direction: column;
+    }
+
+    .content-wrapper {
+      padding-right: 0;
+      margin-bottom: 30px;
+      max-width: 100%;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      max-width: 100%;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+
+        &.image-bottom {
+          align-self: center;
+        }
+      }
+    }
+
+    .icons-wrapper {
+      flex-wrap: wrap;
+
+      .icon {
+        flex-basis: 50%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .testimonial {
+    &-content {
+      flex-direction: column;
+    }
+
+    &-image {
+      margin-bottom: 20px;
+    }
+  }
+}

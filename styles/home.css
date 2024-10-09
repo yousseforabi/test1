@@ -369,3 +369,86 @@ footer .footer-content .social-icons {
 footer .footer-content .social-icons a {
   margin: 0 10px;
 }
+
+@media (max-width: 768px) {
+  .hero-content {
+    margin-top: 20px;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .hero-content .tagline {
+    font-size: 1.2rem;
+  }
+  .search-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .search-form input[type=text] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .main-nav .nav-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main-nav .nav-links {
+    margin-top: 20px;
+  }
+  .main-nav .nav-links li {
+    margin: 10px 0;
+  }
+  .why-choose-us .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .why-choose-us .content-wrapper {
+    padding-right: 0;
+    margin-bottom: 30px;
+    max-width: 100%;
+  }
+  .why-choose-us .image-wrapper {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .why-choose-us .image-wrapper img {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+  }
+  .why-choose-us .image-wrapper img.image-bottom {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .why-choose-us .icons-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .why-choose-us .icons-wrapper .icon {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+  .testimonial-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .testimonial-image {
+    margin-bottom: 20px;
+  }
+}
