@@ -1,0 +1,333 @@
+
+
+
+$primary-color: #5474FD;
+$secondary-color: #333;
+$white: #fff;
+$max-width: 1200px;
+
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-style {
+  background-color: $primary-color;
+  color: $white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+
+body {
+  line-height: 1.6;
+  color: $white;
+  
+}
+
+.land {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  overflow: hidden;
+  @include flex-center;
+
+  &-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/image\ 1.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    justify-content: center;
+  }
+
+  &-content {
+    max-width: 800px;
+    padding: 20px;
+    margin-top: 50px;
+    justify-items: center;
+
+    h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      justify-content: center;
+    }
+  }
+}
+
+.search-form {
+  @include flex-center;
+  margin-bottom: 40px;
+
+  input[type="text"] {
+    padding: 15px;
+    font-size: 1rem;
+    width: 60%;
+    border: none;
+  }
+
+  button {
+    @include button-style;
+  }
+}
+
+.scroll-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+
+  svg {
+    margin-top: 10px;
+  }
+}
+
+.main-nav {
+  background-color: $primary-color;
+  padding: 20px 0;
+  width: 100%;
+
+  .nav-container {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .logo {
+    color: $white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+
+    li {
+      margin-left: 20px;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+
+.why-choose-us {
+  background-image: url(../images/why\ us\ 1.png);
+  color: $white;
+  padding: 80px 0;
+
+  .container {
+    max-width: $max-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 20px;
+  }
+
+  .content-wrapper {
+    flex: 1;
+    padding-right: 50px;
+    max-width: 50%;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .explore-btn {
+      @include button-style;
+    }
+  }
+
+  .image-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 50%;
+
+    img {
+      width: 350px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 5px;
+
+      &.image-bottom {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .icons-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding: 0 20px;
+
+    .icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      svg {
+        margin-bottom: 10px;
+      }
+
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+
+.spain-section {
+  display: flex;
+  flex-direction: column;
+
+  .spain-top, .spain-bottom {
+    height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .spain-top {
+    background-image: url('../images/spain1.png');
+  }
+
+  .spain-bottom {
+    background-image: url('../images/spain2.png');
+  }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    max-width: 500px;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    .book-btn {
+      @include button-style;
+      padding: 10px 20px;
+    }
+  }
+}
+
+
+.testimonial {
+  background-image: url(../images/sam-abc.png);
+  color: $white;
+  padding: 80px 0;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  &-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &-text {
+    text-align: left;
+    max-width: 600px;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+
+footer {
+  background-color: #232323;
+  color: $white;
+  padding: 50px 0;
+  text-align: center;
+
+  .footer-content {
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+
+      a {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+
